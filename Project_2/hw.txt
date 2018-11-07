@@ -1,0 +1,87 @@
+Question 1
+
+endlendl
+grendel
+
+Question 2
+
+It prints rows of #'s and the number of #'s corresponds to the row number (row 1 has 1 #)
+
+Question 3
+
+#include <iostream>
+using namespace std;
+
+	int main()
+	{
+	    int side;
+
+	    cout << "Enter a number: ";
+	    cin >> side;
+
+	    for (int i = 0; i < side; i++)
+	    {
+		int j = i;
+		while (j >=0)
+		{
+			cout << "#";
+			j--;
+		}
+		cout << "\n";
+	    }
+	}
+
+Question 4
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int side;
+	cout << "Enter a number: ";
+    
+	cin >> side;
+	int i = 0;
+	do
+	{
+		int j = i;
+		if (side <= 0)
+		{
+			break;
+		}
+		while (j >= 0)
+		{
+			cout << "#";
+			j--;
+		}
+		cout << "\n";
+		i++;
+	}
+	while (i < side);
+}
+
+Question 5
+
+switch(codeSection)
+    {
+        case 281:
+            cout << "bigamy";
+            break;
+        case 321:
+        case 322:
+            cout << "selling illegal lottery tickets";
+            break;
+        case 382:
+            cout << "selling rancid butter";
+            break;
+        case 598:
+            cout << "injuring a bird in a public cemetary";
+            break;
+        default:
+            cout << "some other crime";
+            break;
+    }
+
+
+

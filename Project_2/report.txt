@@ -1,0 +1,30 @@
+Rental Charge at 99( 0, 99, 1, Person, n, 5) = The rental charge is $59.73
+Rental Charge at 100( 0, 100, 1, Person, n, 5) = The rental charge is $60.00
+Rental Charge at 101( 0, 101, 1, Person, n, 5) = The rental charge is $60.21
+Rental Charge at 299( 0, 299, 1, Person, n, 5) = The rental charge is $101.79
+Rental Charge at 300( 0, 300, 1, Person, n, 5) = The rental charge is $102.00
+Rental Charge at 301( 0, 301, 1, Person, n, 5) = The rental charge is $102.21
+Rental Charge at 399( 0, 399, 1, Person, n, 5) = The rental charge is $122.79
+Rental Charge at 400( 0, 400, 1, Person, n, 5) = The rental charge is $123.00
+Rental Charge at 401( 0, 401, 1, Person, n, 5) = The rental charge is $123.19
+Odometer start is negative( -1, 1, 1, Person, n, 5) = The starting odometer reading must be nonnegative.
+Odometer end is less than odometer start( 10, 5, Person, n, 5) = The final odometer reading must be at least as large as the starting reading.
+Rental days is not positive( 0, 1, 0, Person, n, 5) = The number of rental days must be positive.
+Customer name is empty( 0, 1, 1, , n, 5) = You must enter a customer name.
+Char in luxury car is not y or n( 0, 1, 1, Person, blah, 5) = You must enter y or n.
+Month is not in the range of 1 and 12 inclusive( 0, 1, 1, Person, n, 13) = The month number must be in the range 1 through 12.
+Month is not in the range of 1 and 12 inclusive( 0, 1, 1, Person, n, 0) = The month number must be in the range 1 through 12.
+Proper pricing of luxury car( 0, 0, 1, Person, y, 5) = The rental charge is $61.00
+Proper pricing of luxury car( 0, 0, 3, Person, y, 5) = The rental charge is $183.00
+Proper pricing of normal car( 0, 0, 1, Person, n, 5) = The rental charge is $33.00
+Proper pricing of normal car( 0, 0, 3, Person, n, 5) = The rental charge is $99.00
+Proper pricing of winter months lower range( 0, 101, 1, Person, n, 3) = The rental charge is $60.27
+Proper pricing of normal months lower range( 0, 101, 1, Person, n, 4) = The rental charge is $60.21
+Proper pricing of winter months lower range( 0, 101, 1, Person, n, 12) = The rental charge is $87.27
+Proper pricing of normal months lower range( 0, 101, 1, Person, n, 11) = The rental charge is $60.27
+Proper pricing of winter months higher range( 0, 399, 1, Person, n, 3) = The rental charge is $140.73
+Proper pricing of normal months higher range( 0, 399, 1, Person, n, 4) = The rental charge is $122.79
+Proper pricing of winter months higher range( 0, 399, 1, Person, n, 12) = The rental charge is $140.73
+Proper pricing of normal months higher range( 0, 399, 1, Person, n, 11) = The rental charge is $122.79
+
+
