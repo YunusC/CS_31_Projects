@@ -1,0 +1,70 @@
+A. A brief description of notable obstacles overcame
+
+The most notable obstacle was trying to think of all the corner cases which "hasProperSyntax" would fail. Thinking of multiple character and digit combinations that do not count as valid party results but slipped through "hasProperSyntax".
+
+B. Pseudocode
+
+Int tallySeats(string pollData, char party, int& seatTally)
+
+Check if 'party' input is a valid character
+	if not
+		return 2
+Repeatedly while there are still characters left in the pollData:
+	Check if pollData is a valid poll data string
+		if pollData isn't valid
+			return 1
+	Determine if the current state forecast has data relating to given party 
+		if state forecast has data
+			determine the amount of seats predicted to win and add to seats
+			continue on to the next state forecast
+		if state forecast has no relevant data
+			continue on to the next state forecast
+	If there are no more state forecasts
+		add seats to seatTally
+		return 0
+
+
+
+C. List of Test Data 
+
+    testCase[0] = {"ca,ny,ma",'x',seatTally} // state forecast with no poll results
+
+    testCase[1] = {"ca,ny,ma",'1',seatTally} // char party is not a letter
+
+    testCase[2] = {"ca,,ny,ma",'x',seatTally} //two or more consecutive commas
+
+    testCase[3] = {"ca,ny,ma,",'x',seatTally} //comma at the end
+
+    testCase[4] = {",ca,ny,ma",'x',seatTally} //comma at beginning
+
+    testCase[5] = {"",'x',seatTally} //empty string
+
+    testCase[6] = {"banana",'x',seatTally} //random string
+
+    testCase[7] = {"california",'x',seatTally};//string that start with state codes
+
+    testCase[8] = {"ca9li",'x',seatTally = 0};//random party letters with no poll results
+
+    testCase[9] = {"ca111r",'r',seatTally = 0} //if pollData has more than 2 consecutive digits
+
+    testCase[10] = {"cal",'r',seatTally = 0} //checks if a single character after statecode with fail
+
+    testCase[11] = {"ca10r17d,ny77r,nv22d,co,wa5r13d17i",'D',seatTally = 0} //search for 'D' poll Results
+
+    testCase[12] = {"ca10r17d,ny77r,nv22d,co,wa5r13d17i",'R',seatTally = 0} //search for 'R' poll Results
+
+    testCase[13] = {"ca10r17d,ny77r,nv22d,co,,wa5r13d17i",'R',seatTally = 0} //faulty pollData in the middle of string
+
+    testCase[14] = {"ct5d,ny9r17d1i",'x',seatTally = 0};//checks if seatTally is set to zero
+
+    testCase[15] = {"ca,ny,ma",'x',seatTally = 0} //chekcs if seatTally is set to zero
+
+    testCase[16] = {"ct5d,ny9r17+1i",'x',seatTally = 0}; //checks if "17+" will give correct return value
+
+    testCase[17] = {"ct5d,ny9r17d1i",'d',seatTally = 0} /checks if proper number is given back for given input
+
+    testCase[18] = {"ct5d,ny9r17d1i",'+',seatTally = 0} //checks for return value of 2 if non-character is given
+
+    testCase[19] = {"ct5d,ny9r17+1i",'d',seatTally = 100} //checks if value of seatTally is changed if pollData is determined faulty in the program
+
+    testCase[20] = {"ca+",'d',seatTally = 0} //checks if non-character values will fail function "hasProperSyntax"
