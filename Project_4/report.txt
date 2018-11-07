@@ -1,0 +1,59 @@
+a. Notable Obstacles
+My biggest obstacle was trying to find a way to test a sequence of arrays on all the functions. I had to do research into vectors and structs with vectors. I got it to work.
+
+b. Test Cases
+int appendToAll(string a[], int n, string value);
+{"0", "00", "000", "0000", "00000"}, "!!!"; - basic function
+{"dianne", "eddie", "coolbeans", "fiona", "ed", "xavier", "john", "john", "betty", "betty", "sonic", ""} - more advanced function
+{} - empty array;
+
+int lookup(const string a[], int n, string target);
+{"0", "00", "000", "0000", "00000"}, "00"; - basic function
+{"dianne", "eddie", "coolbeans", "fiona", "ed", "xavier", "john", "john", "betty", "betty", "sonic", ""} - more advanced function
+{} - empty array;
+
+int positionOfMax(const string a[], int n);
+{"0", "00", "000", "0000", "00000"}, "00"; - basic function
+{"dianne", "eddie", "coolbeans", "fiona", "ed", "xavier", "john", "john", "betty", "betty", "sonic", ""} - more advanced function
+{} - empty array;
+
+int rotateLeft(string a[], int n, int pos);
+{"0", "00", "000", "0000", "00000"}, "00"; - basic function
+{"dianne", "eddie", "coolbeans", "fiona", "ed", "xavier", "john", "john", "betty", "betty", "sonic", ""} - more advanced function
+{} - empty array;
+
+int countRuns(const string a[], int n);
+{"0", "00", "000", "0000", "00000"}, "00"; - basic function
+{"dianne", "eddie", "coolbeans", "fiona", "ed", "xavier", "john", "john", "betty", "betty", "sonic", ""} - more advanced function
+{} - empty array;
+
+int flip(string a[], int n);
+{"0", "00", "000", "0000", "00000"}, "00"; - basic function
+{"dianne", "eddie", "coolbeans", "fiona", "ed", "xavier", "john", "john", "betty", "betty", "sonic", ""} - more advanced function
+{} - empty array;
+
+int differ(const string a1[], int n1, const string a2[], int n2);
+{"0", "00", "000", "0000", "00000"}; - basic function
+{"0", "00"};
+
+{"dianne", "eddie", "coolbeans", "fiona", "ed", "xavier", "john", "john", "betty", "betty", "sonic", ""} - more advanced function
+{"john", "john"}
+
+int subsequence(const string a1[], int n1, const string a2[], int n2);
+{"0", "00", "000", "0000", "00000"}; - basic function
+{"0", "00"};
+
+{"dianne", "eddie", "coolbeans", "fiona", "ed", "xavier", "john", "john", "betty", "betty", "sonic", ""} - more advanced function
+{"john", "john"}
+
+int lookupAny(const string a1[], int n1, const string a2[], int n2);
+{"0", "00", "000", "0000", "00000"}; - basic function
+{"0", "00"};
+
+{"dianne", "eddie", "coolbeans", "fiona", "ed", "xavier", "john", "john", "betty", "betty", "sonic", ""} - more advanced function
+{"john", "john"}
+
+int divide(string a[], int n, string divider);
+{"0", "00", "000", "0000", "00000"}, "00"; - basic function
+{"dianne", "eddie", "coolbeans", "fiona", "ed", "xavier", "john", "john", "betty", "betty", "sonic", ""} - more advanced function
+{} - empty array;
