@@ -1,0 +1,38 @@
+a.A brief description of obstacles overcome
+
+I had trouble figuring out how to create an array with variable size without being flagged by the Werror=vlad. I ended up finding the 'new' operator and created my arrays with no problem.
+
+b.A description of the design of the program
+
+int makeProper(char word1[][MAX_WORD_LENGTH+1], char word2[][MAX_WORD_LENGTH+1], int seperation[], int nPatterns):
+
+Automatically stop the program if nPatterns is less than or equal to zero
+Change every letter in each pattern to lowercase
+Check if there's repetition of words between two patterns and delete the one with lower separation
+Check if patterns meet requirements and, if they do, store the pattern number 
+Remove faulty patterns by copying proper patterns over the initial patterns
+Return the amount of proper patterns found
+
+
+int rate(const char document[], const char word1[][MAX_WORD_LENGTH+1], const char word2[][MAX_WORD_LENGTH+1], const int separation[], int nPatterns);:
+
+Cycles through the document and stores every word into a 2-D array
+Compares the words in the 2-D array to words in a given pattern and rates the document
+
+c.List of Test Data:
+
+assert(rate("The mad UCLA scientist unleashed a deranged evil giant robot.", test1w1, test1w2, test1dist, TEST1_NCRITERIA) == 2);//tests regular funciton
+    assert(rate("The mad UCLA scientist unleashed    a deranged robot.",  test1w1, test1w2, test1dist, TEST1_NCRITERIA) == 2);//test with larger spaces
+    assert(rate("**** 2014 ****" ,  test1w1, test1w2, test1dist, TEST1_NCRITERIA) == 0);//no alphabets
+    assert(rate("  That plot: NEFARIOUS!" ,  test1w1, test1w2, test1dist, TEST1_NCRITERIA) == 1);//combination of special characters and charactesrs
+    assert(rate("deranged deranged robot deranged robot robot" ,  test1w1, test1w2, test1dist,TEST1_NCRITERIA) == 2);//repeated words
+    assert(rate("Two mad scientists suffer from deranged-robot fever." ,  test1w1, test1w2, test1dist, TEST1_NCRITERIA) == 0);
+    assert(rate("" ,  test1w1, test1w2, test1dist, TEST1_NCRITERIA) == 0);//empty string
+    assert(rate("deranged deranged deranged deranged deranged" ,  test1w1, test1w2, test1dist, TEST1_NCRITERIA) == 1);//repeated words
+    assert(rate("The deranged robot." ,  test1w1, test1w2, test1dist, TEST1_NCRITERIA) == 1);
+    assert(rate("that is a Very Nefarious:: plot!!" ,  test1w1, test1w2, test1dist,TEST1_NCRITERIA) == 1);
+    assert(rate("The mad UCLA       $scientist unle@asheD a deranged robot." ,  test1w1, test1w2, test1dist,TEST1_NCRITERIA) == 2);//combination of letters and special characters
+
+   char test2w1[test2n][MAX_WORD_LENGTH+1] = {"quick", "brown", "fox", "Brown", "FOX", "F^ox", "banana phon", "banana", "super", "woman"};
+    char test2w2[test2n][MAX_WORD_LENGTH+1] = {"brown", "quick", "fox", "quick", "fox", "banana", "bad"," ", "man", "quick"};
+    //checks for repeats, capital letters, special characters, multiple words in a pattern, and empty words
